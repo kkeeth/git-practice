@@ -2,7 +2,7 @@ module.exports = {
   mode: 'development',
   entry: __dirname + '/src/app.js',
   output: {
-    path: __dirname + 'dist',
+    path: `${__dirname}/dist`,
     filename: 'bundle.js',
   },
   module: {
@@ -17,5 +17,9 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    modules: [`${__dirname}/src`, 'node_modules'],
+    extensions: ['.js'],
   }
 }
